@@ -1,4 +1,4 @@
-#include "../include/Threadpool.h"
+#include "../include/ThreadPool.h"
 #include "../include/Server.h"
 
 using namespace std;
@@ -16,7 +16,7 @@ ThreadPool::ThreadPool(size_t numberofthreads, Server *server)
         ClientInfo task = tasks.front();
         tasks.pop();
         lock.unlock();
-        this->server->handleclient(task,this_thread::get_id());
+        this->server->handleclient(task, this_thread::get_id());
       }
     });
   }
