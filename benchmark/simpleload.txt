@@ -1,0 +1,11 @@
+$ wrk -t4 -c100 -d30s http://127.0.0.1:8080/
+
+Running 30s test @ http://127.0.0.1:8080/
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.23ms    4.15ms 218.81ms   99.56%
+    Req/Sec    11.79k     1.42k   46.88k    86.43%
+  1409462 requests in 30.10s, 373.68MB read
+
+Requests/sec:  46826.09
+Transfer/sec:     12.41MB

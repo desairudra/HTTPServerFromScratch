@@ -1,0 +1,14 @@
+$ ulimit -n 65536
+
+$ wrk -t4 -c2000 -d30s http://127.0.0.1:8080/
+
+Running 30s test @ http://127.0.0.1:8080/
+  4 threads and 2000 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    33.74ms   63.16ms   1.69s    99.37%
+    Req/Sec    11.64k     1.88k   17.93k    76.25%
+  1390201 requests in 30.04s, 368.57MB read
+  Socket errors: connect 0, read 0, write 0, timeout 426
+
+Requests/sec:  46272.57
+Transfer/sec:     12.27MB
