@@ -1,0 +1,14 @@
+Benchmark Results
+
+Tool: wrk
+
+Configuration:
+- 4 benchmark threads
+- 100 concurrent connections
+- Duration: 10 seconds
+
+Results:
+- Requests/sec : ~17,435
+- Average Latency : 13.54 ms
+- Total Requests : 174,559
+- Throughput : 4.19 MB/s
